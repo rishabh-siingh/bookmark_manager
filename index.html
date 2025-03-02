@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#1f1f1f">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks Manager</title>
+</head>
+<body>
+    <div class="header">
+        <div id="current-path">/bookmarks</div>
+        <div id="search-btn">search 🔍</div>
+        <div id="sort-btn">Sort🔻</div>
+    </div>
+
+    <div class="back-btn" id="back"><div class="folder-icon">📁</div>> Back...</div>
+    <div class="folder-list" id="folder-list">
+        <!-- Dynamically populated -->
+    </div>
+
+    <div class="add-button" id="add-button">+</div>
+
+    <div class="modal" id="add-modal">
+        <div class="modal-content">
+            <h2>Add Bookmark/Folder</h2>
+            <select id="item-type">
+                <option value="bookmark">Bookmark</option>
+                <option value="folder">Folder</option>
+            </select>
+            <input type="text" id="name-input" placeholder="Name">
+            <input type="text" id="url-input" placeholder="URL (for bookmarks)">
+            <input type="text" id="tags-input" placeholder="Tags (comma-separated)">
+            <label><input type="checkbox" id="favorite-input"> Favorite</label>
+            <button id="save-item">Save</button>
+            <button id="close-modal">Cancel</button>
+        </div>
+    </div>
+
+    <div class="preview" id="preview">Preview: <a href="#" id="preview-link" target="_blank"></a></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
